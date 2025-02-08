@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  background-color: #edf2f8;
+}
+.PBLText{
+  font-size: 2em;
+  font-family: "Barlow Semi Condensed";
+  font-weight: 800;
+}
+.cssgridtest {
+  display: grid;
+  grid-template-columns: repeat(20, 5em);
+  grid-template-rows: repeat(10, 5em);
+  grid-gap: 20px;
+}
+.Daniel {
+  display: flex;
+  grid-column: 2/11;
+  grid-row: 2/6;
+  background-color: #733fc8;
+  border-radius: 20px;
+  font-family: "Barlow Semi Condensed";
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.308);
+  background-repeat: no-repeat;
+  background-position: 40em 0;
+  background-size: 150px;
+}
+.ImgDestination{
+  border-radius: 20px;
+  padding-right: 20px;
+  width: 50%;
+}
+.DanielParagraph1{
+  color: #ecf2fb;
+  font-weight: 800;
+  font-size: 2.5em;
+  margin: 20px;
+}
+.DanielParagraph2{
+  color: #fdfbff;
+  margin: 20px;
+  font-size: 2.25em;
+  font-weight: 500;
+}
+.TurkeyINfo{
+  color: #fdfbff;
+  margin: 20px;
+  font-size: 1.8em;
+  font-weight: 300;
+}
+.Janathan{
+  display: flex;
+  grid-column: 11/15;
+  grid-row: 2/6;
+  background-color: #49556b;
+  border-radius: 20px;
+  font-family: "Barlow Semi Condensed";
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.308);
+  flex-direction: column;
+}
+.HotelImg{
+  border-radius: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 50%;
+}
+.JanathanParagraph1{
+  color: #ecf2fb;
+  font-weight: 600;
+  font-size: 1.8em;
+  margin: 20px;
+  margin-top: 10px;
+}
+.JanathanParagraph2{
+  color: #969fb0;
+  margin: 20px;
+  font-size: 1.25em;
+  font-weight: 500;
+}
+.Jeanette{
+  grid-row: 6/10;
+  grid-column: 2/6;
+  background-color: #ffffff;
+  border-radius: 20px;
+  font-family: "Barlow Semi Condensed";
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.308);
+}
+.JeanetteParagraph1{
+  color: #5c6675;
+  font-weight: 600;
+  font-size: 2.2em;
+  margin: 20px;
+  margin-top: 0;
+}
+.JeanetteParagraph2{
+  color: #717477;
+  margin: 20px;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-top: 0;
+}
+.Patrick{
+  grid-column: 6/15;
+  grid-row: 6/10;
+  background-color: #18202d;
+  border-radius: 20px;
+  font-family: "Barlow Semi Condensed";
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.308);
+  display: flex;
+}
+.PatrickParagraph1{
+  color: #ecf2fb;
+  font-weight: 600;
+  font-size: 3.2em;
+  margin: 20px;
+}
+.PatrickParagraph2{
+  color: #ecf2fb;
+  margin: 20px;
+  font-size: 2.35em;
+  font-weight: 500;
+}
+.Kira{
+  grid-column: 15/19;
+  grid-row: 2/10;
+  background-color: #ffffff;
+  border-radius: 20px;
+  font-family: "Barlow Semi Condensed";
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.308);
+}
+.KiraParagraph1{
+  color: #4e5468;
+  font-weight: 600;
+  font-size: 1.8em;
+  margin: 20px;
+}
+.KiraParagraph2{
+  color: #93979c;
+  margin: 20px;
+  font-size: 1.15em;
+  font-weight: 500;
+}
+.textthatbigger{
+  font-size: larger;
+}
+.img1{
+  width: 90%;
+  border-radius: 10px;
+  height: 15vh;
+}
+.restaurantimageContainer{
+  display: flex;
+}
+.Daniel, .Janathan, .Jeanette, .Patrick, .Kira {
+  transition: transform 0.3s ease;
+}
+
+.Daniel:hover, .Janathan:hover, .Jeanette:hover, .Patrick:hover, .Kira:hover {
+  transform: scale(1.05);
+}
+@media only screen and (max-width: 600px) {
+  .cssgridtest   {
+    display: flex;
+    flex-direction: column
+  }
+  .Daniel{
+    background-position: 15em 0;
+    flex-direction: column;
+  }
+  .ImgDestination{
+    border-radius: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 50%;
+  }
+  .Patrick{
+    flex-direction: column; 
+  }
+  .Daniel:hover, .Janathan:hover, .Jeanette:hover, .Patrick:hover, .Kira:hover {
+    transform: scale(1.03);
+  }
+}
