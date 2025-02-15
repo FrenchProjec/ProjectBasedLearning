@@ -5,6 +5,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
+  z-index: -1;
 }
 .PBLText{
   font-size: 2em;
@@ -235,9 +236,13 @@
   }
 }
 @media (max-width: 600px), (orientation: portrait) {
+  .PBLText{
+    width: 50%;
+  }
   .cssgridtest  {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    width: 90%;
   }
   .Daniel{
     background-position: 15em 0;
