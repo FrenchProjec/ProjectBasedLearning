@@ -16,7 +16,7 @@
   </center>
   <main class="cssgridtest">
     <div class="Daniel" style="background-image: url('images/bg-pattern-quotation.svg');">
-      <img src="images2/images/images (1).jpeg" class="ImgDestination">
+      <img src="images2/images/images (1).jpeg" class="ImgDestination" onclick="openOverlay('https://example.com')">
       <div><p>
       <h1 class="DanielParagraph1">
         Déstination: Turkey
@@ -34,14 +34,14 @@
     </div>
     </div>
     <div class="Janathan">
-      <img src="images2/images/625997184.jpg" class="HotelImg" />
+      <img src="images2/images/625997184.jpg" class="HotelImg" onclick="openOverlay('https://example.com')" />
       <div class="JanathanParagraph1">
         Rester:
         Le séjour se fera au Sezgin Hotel Laleli (chambres triples divisées). sur 3 personnes
       </div>
     </div>
     <div class="Jeanette">
-      <img src="images2/images/Souvenirs-from-Turkey-00022-1024x683.jpg" class="HotelImg" />
+      <img src="images2/images/Souvenirs-from-Turkey-00022-1024x683.jpg" class="HotelImg" onclick="openOverlay('https://example.com')" />
       <div class="JeanetteParagraph1">
         Souvenirs
       </div>
@@ -54,7 +54,7 @@
       </div>
     </div>
     <div class="Patrick">
-      <img src="images2/images/activities image.avif" class="ImgDestination">
+      <img src="images2/images/activities image.avif" class="ImgDestination" onclick="openOverlay('https://example.com')">
       <div><div class="PatrickParagraph1"> Activities:</div>
       <div class="PatrickParagraph2">
         <ol>
@@ -72,15 +72,15 @@
           <div>
             <!-- div 1 -->
             <div>
-              <img src="images2/images/restaurant images/131329_sld.jpg" class="img1">
+              <img src="images2/images/restaurant images/131329_sld.jpg" class="img1" onclick="openOverlay('https://example.com')">
             </div>
             The Gelata House
             <div>
-              <img src="images2/images/restaurant images/Meze-by-Lemon-Tree-exterior1.jpg" class="img1">
+              <img src="images2/images/restaurant images/Meze-by-Lemon-Tree-exterior1.jpg" class="img1" onclick="openOverlay('https://example.com')">
             </div>
             Meze By Lemon Tree
             <div>
-              <img src="images2/images/restaurant images/medium_Hamdi_Restaurant_Terrace.jpg" class="img1">
+              <img src="images2/images/restaurant images/medium_Hamdi_Restaurant_Terrace.jpg" class="img1" onclick="openOverlay('https://example.com')">
             </div>
             Hamdi Restaurant
           </div>
@@ -88,15 +88,15 @@
           <div>
             <!-- div 2 -->
             <div>
-              <img src="images2/images/restaurant images/image.jpg" class="img1">
+              <img src="images2/images/restaurant images/image.jpg" class="img1" onclick="openOverlay('https://example.com')">
             </div>
             Beyti Restaurant
             <div>
-              <img src="images2/images/restaurant images/dinner-time.jpg" class="img1">
+              <img src="images2/images/restaurant images/dinner-time.jpg" class="img1" onclick="openOverlay('https://example.com')">
             </div>
             Sultanahmet Restaurant
             <div>
-              <img src="images2/images/restaurant images/1_1552481861_cover.jpg" class="img1">
+              <img src="images2/images/restaurant images/1_1552481861_cover.jpg" class="img1" onclick="openOverlay('https://example.com')">
             </div>
             Simit Sarayi
           </div>
@@ -105,6 +105,36 @@
       </div>
     </div>
   </main>
+  <script>
+  function openOverlay(link) {
+    // Create overlay
+    let overlay = document.createElement("div");
+    overlay.classList.add("overlay");
+    
+    // Create content inside overlay
+    let overlayContent = document.createElement("div");
+    overlayContent.classList.add("overlay-content");
+    overlayContent.innerText = "Click me to visit";
+    
+    // Click on overlay content to open link
+    overlayContent.onclick = function () {
+      window.open(link, "_blank"); // Open link in new tab
+      document.body.removeChild(overlay); // Remove overlay after clicking
+    };
+
+    // Click anywhere outside content to close overlay
+    overlay.onclick = function () {
+      document.body.removeChild(overlay);
+    };
+
+    // Append content to overlay and overlay to body
+    overlay.appendChild(overlayContent);
+    document.body.appendChild(overlay);
+
+    // Display overlay
+    overlay.style.display = "flex";
+  }
+</script>
 </body>
 
 </html>

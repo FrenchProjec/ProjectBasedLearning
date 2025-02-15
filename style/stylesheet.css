@@ -158,8 +158,80 @@ body {
 .Daniel:hover, .Janathan:hover, .Jeanette:hover, .Patrick:hover, .Kira:hover {
   transform: scale(1.05);
 }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Black with transparency */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1000;
+}
+
+/* Clickable text */
+.overlay-content {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.overlay-content:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 1366px) {
+  .cssgridtest {
+    display: grid;
+    grid-template-columns: repeat(20, 3em);
+    grid-template-rows: repeat(10, 4em);
+    grid-gap: 20px;
+  }
+  .DanielParagraph1{
+    font-size: 1.5em;
+  }
+  .DanielParagraph2{
+    font-size: 1.2em;
+  }
+  .TurkeyINfo{
+    color: #fdfbff;
+    margin: 20px;
+    font-size: 1.3em;
+    font-weight: 300;
+  }
+  .JanathanParagraph1{
+    font-size: 1.2em;
+  }
+  .JanathanParagraph2{
+    font-size: 1em;
+  }
+  .JeanetteParagraph1{
+    font-size: 1.5em;
+  }
+  .JeanetteParagraph2{
+    font-size: 1em;
+  }
+  .PatrickParagraph1{
+    font-size: 3em;
+  }
+  .PatrickParagraph2{
+    font-size: 2em;
+  }
+  .img1{
+    width: 90%;
+    border-radius: 10px;
+    height: 10vh;
+  }
+}
 @media (max-width: 600px), (orientation: portrait) {
-  .cssgridtest   {
+  .cssgridtest  {
     display: flex;
     flex-direction: column
   }
@@ -178,5 +250,17 @@ body {
   }
   .Daniel:hover, .Janathan:hover, .Jeanette:hover, .Patrick:hover, .Kira:hover {
     transform: scale(1.03);
+  }
+  .img1{
+    width: 90%;
+    border-radius: 10px;
+    height: 10vh;
+  }
+  .KiraParagraph2{
+    width: auto;
+    height: auto;
+  }
+  .restaurantimageContainer{
+    width: 100%;
   }
 }
